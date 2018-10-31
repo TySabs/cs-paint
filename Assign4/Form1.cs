@@ -10,8 +10,15 @@ using System.Windows.Forms;
 
 namespace Assign4
 {
+
     public partial class Form1 : Form
     {
+
+        public Graphics g; 
+        private Point point1;
+        private Point point2;
+        public Color selectedColor = Color.Black; 
+
         public Form1()
         {
             InitializeComponent();
@@ -21,8 +28,23 @@ namespace Assign4
         {
             TextBox temp = sender as TextBox; 
 
-            pictureBox1.BackColor = temp.BackColor; 
- 
+  //          pictureBox1.BackColor = temp.BackColor;
+            selectedColor = temp.BackColor; 
+
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            point1 = e.Location; 
+        }
+
+        private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
+        {
+            Pen linePen = new Pen(selectedColor); 
+            point2 = e.Location;
+            g = this.CreateGraphics(); 
+            g.DrawLine(linePen, point1, point2); 
+            
         }
     }
 }
