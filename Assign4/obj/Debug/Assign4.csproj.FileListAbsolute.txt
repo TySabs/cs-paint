@@ -18,3 +18,13 @@ C:/Users/Josh/Desktop/Assign4/Assign4/Assign4/obj/Debug/Assign4.Form1.resources
 /Users/tymac/Desktop/lab/Assign4/Assign4/obj/Debug/Assign4.exe
 /Users/tymac/Desktop/lab/Assign4/Assign4/obj/Debug/Assign4.pdb
 /Users/tymac/Desktop/lab/Assign4/Assign4/obj/Debug/Assign4.PaintApp.resources
+C:\Users\Tyler\Desktop\Assign4\Assign4\bin\Debug\Assign4.exe.config
+C:\Users\Tyler\Desktop\Assign4\Assign4\bin\Debug\Assign4.exe
+C:\Users\Tyler\Desktop\Assign4\Assign4\bin\Debug\Assign4.pdb
+C:\Users\Tyler\Desktop\Assign4\Assign4\obj\Debug\Assign4.csprojAssemblyReference.cache
+C:\Users\Tyler\Desktop\Assign4\Assign4\obj\Debug\Assign4.PaintApp.resources
+C:\Users\Tyler\Desktop\Assign4\Assign4\obj\Debug\Assign4.Properties.Resources.resources
+C:\Users\Tyler\Desktop\Assign4\Assign4\obj\Debug\Assign4.csproj.GenerateResource.cache
+C:\Users\Tyler\Desktop\Assign4\Assign4\obj\Debug\Assign4.csproj.CoreCompileInputs.cache
+C:\Users\Tyler\Desktop\Assign4\Assign4\obj\Debug\Assign4.exe
+C:\Users\Tyler\Desktop\Assign4\Assign4\obj\Debug\Assign4.pdb

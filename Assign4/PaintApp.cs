@@ -38,28 +38,50 @@ namespace Assign4
 
         private void PaintCanvas_MouseDown(object sender, MouseEventArgs e)
         {
-            point1 = e.Location; 
+            if (point1.IsEmpty)
+            {
+                point1 = e.Location;
+            } else if (point2.IsEmpty)
+            {
+                point2 = e.Location;
+            }
         }
 
         private void PaintCanvas_MouseMove(object sender, MouseEventArgs e)
         {
-    //        if (movingMouse)
 
         }
         private void PaintCanvas_MouseUp(object sender, MouseEventArgs e)
         {
-
-            point2 = e.Location;
-            Pen linePen = new Pen(selectedColor);
-            g = this.CreateGraphics();
-            //    e.Graphics.DrawLine
-            g.DrawLine(linePen, point1, point2);
-
+            if (!point1.IsEmpty && !point2.IsEmpty)
+            {
+                PaintCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.PaintCanvas_Paint);
+                PaintCanvas.Refresh();
+            }
         }
 
         private void PaintCanvas_Paint(object sender, PaintEventArgs e)
         {
 
+            Pen linePen = new Pen(selectedColor);
+
+            if (!point1.IsEmpty && !point2.IsEmpty)
+            {
+
+                int x1 = point1.X;
+                int y1 = point1.Y;
+                int x2 = point2.X;
+                int y2 = point2.Y;
+
+                e.Graphics.DrawLine(linePen, x1, y1, x2, y2);
+
+                point1 = Point.Empty;
+                point2 = Point.Empty;
+
+
+            }
+
+    
         }
     }
 }
