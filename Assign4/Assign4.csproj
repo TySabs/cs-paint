@@ -52,9 +52,6 @@
     <Compile Include="PaintApp.Designer.cs">
       <DependentUpon>PaintApp.cs</DependentUpon>
     </Compile>
-    <Compile Include="PaintApp.Model.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PaintApp.resx">
@@ -68,6 +65,14 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PaintApp.Controller.cs">
+      <DependentUpon>PaintApp.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaintApp.Model.cs">
+      <DependentUpon>PaintApp.cs</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
