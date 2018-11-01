@@ -14,17 +14,19 @@ namespace Assign4
 
     public partial class PaintApp : Form
     {
-        public Stack leftStack = new Stack();
-        public Stack rightStack = new Stack();
-        public Graphics g;
-        public Point point1;
-        public Point point2;
-        public Color selectedColor = Color.Black;
 
         public PaintApp()
         {
             InitializeComponent();
+            InitFrameSize();
             CenterToScreen();
+        }
+
+        private void InitFrameSize()
+        {
+            int h = Screen.PrimaryScreen.WorkingArea.Height - 200;
+            int w = Screen.PrimaryScreen.WorkingArea.Width - 300;
+            Size = new Size(w, h);
         }
 
         private void Box_Click(object sender, EventArgs e)
