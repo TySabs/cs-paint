@@ -1,6 +1,6 @@
 ﻿namespace Assign4
 {
-    partial class Form1
+    partial class PaintApp
     {
         /// <summary>
         /// Required designer variable.
@@ -66,15 +66,15 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutTheDevelopersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.PaintCanvas = new System.Windows.Forms.PictureBox();
+            this.UndoButton = new System.Windows.Forms.Button();
+            this.RedoButton = new System.Windows.Forms.Button();
+            this.EraserButton = new System.Windows.Forms.Button();
+            this.BrushButton = new System.Windows.Forms.Button();
+            this.PencilButton = new System.Windows.Forms.Button();
+            this.LineButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PaintCanvas)).BeginInit();
             this.SuspendLayout();
             // 
             // BlackBox
@@ -406,90 +406,90 @@
             this.label1.TabIndex = 29;
             this.label1.Text = "Please Choose a Color:";
             // 
-            // pictureBox1
+            // PaintCanvas
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 124);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1219, 511);
-            this.pictureBox1.TabIndex = 30;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
-            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
-            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
+            this.PaintCanvas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.PaintCanvas.Location = new System.Drawing.Point(12, 124);
+            this.PaintCanvas.Name = "PaintCanvas";
+            this.PaintCanvas.Size = new System.Drawing.Size(1219, 511);
+            this.PaintCanvas.TabIndex = 30;
+            this.PaintCanvas.TabStop = false;
+            this.PaintCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.PaintCanvas_Paint);
+            this.PaintCanvas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PaintCanvas_MouseDown);
+            this.PaintCanvas.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PaintCanvas_MouseUp);
             // 
-            // button1
+            // UndoButton
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(871, 66);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 23);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "Undo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.UndoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UndoButton.Location = new System.Drawing.Point(871, 66);
+            this.UndoButton.Name = "UndoButton";
+            this.UndoButton.Size = new System.Drawing.Size(95, 23);
+            this.UndoButton.TabIndex = 31;
+            this.UndoButton.Text = "Undo";
+            this.UndoButton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // RedoButton
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(984, 66);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 23);
-            this.button2.TabIndex = 32;
-            this.button2.Text = "Redo";
-            this.button2.UseVisualStyleBackColor = true;
+            this.RedoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RedoButton.Location = new System.Drawing.Point(984, 66);
+            this.RedoButton.Name = "RedoButton";
+            this.RedoButton.Size = new System.Drawing.Size(95, 23);
+            this.RedoButton.TabIndex = 32;
+            this.RedoButton.Text = "Redo";
+            this.RedoButton.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // EraserButton
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(711, 85);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(95, 23);
-            this.button3.TabIndex = 34;
-            this.button3.Text = "Eraser";
-            this.button3.UseVisualStyleBackColor = true;
+            this.EraserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EraserButton.Location = new System.Drawing.Point(711, 85);
+            this.EraserButton.Name = "EraserButton";
+            this.EraserButton.Size = new System.Drawing.Size(95, 23);
+            this.EraserButton.TabIndex = 34;
+            this.EraserButton.Text = "Eraser";
+            this.EraserButton.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // BrushButton
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(711, 54);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(95, 23);
-            this.button4.TabIndex = 33;
-            this.button4.Text = "Paint Brush";
-            this.button4.UseVisualStyleBackColor = true;
+            this.BrushButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BrushButton.Location = new System.Drawing.Point(711, 54);
+            this.BrushButton.Name = "BrushButton";
+            this.BrushButton.Size = new System.Drawing.Size(95, 23);
+            this.BrushButton.TabIndex = 33;
+            this.BrushButton.Text = "Paint Brush";
+            this.BrushButton.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // PencilButton
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(597, 85);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(95, 23);
-            this.button5.TabIndex = 36;
-            this.button5.Text = "Pencil";
-            this.button5.UseVisualStyleBackColor = true;
+            this.PencilButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PencilButton.Location = new System.Drawing.Point(597, 85);
+            this.PencilButton.Name = "PencilButton";
+            this.PencilButton.Size = new System.Drawing.Size(95, 23);
+            this.PencilButton.TabIndex = 36;
+            this.PencilButton.Text = "Pencil";
+            this.PencilButton.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // LineButton
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(597, 54);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(95, 23);
-            this.button6.TabIndex = 35;
-            this.button6.Text = "Draw Line";
-            this.button6.UseVisualStyleBackColor = true;
+            this.LineButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LineButton.Location = new System.Drawing.Point(597, 54);
+            this.LineButton.Name = "LineButton";
+            this.LineButton.Size = new System.Drawing.Size(95, 23);
+            this.LineButton.TabIndex = 35;
+            this.LineButton.Text = "Draw Line";
+            this.LineButton.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // PaintApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1243, 773);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.PencilButton);
+            this.Controls.Add(this.LineButton);
+            this.Controls.Add(this.EraserButton);
+            this.Controls.Add(this.BrushButton);
+            this.Controls.Add(this.RedoButton);
+            this.Controls.Add(this.UndoButton);
+            this.Controls.Add(this.PaintCanvas);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SandyBrownBox);
             this.Controls.Add(this.DeepPinkBox);
@@ -525,7 +525,7 @@
             this.Text = "Josh and Tyler\'s Ode to Paint";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PaintCanvas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -564,7 +564,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox PaintCanvas;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
@@ -572,12 +572,12 @@
         private System.Windows.Forms.ToolStripMenuItem recentlyOpenedToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutTheDevelopersToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button UndoButton;
+        private System.Windows.Forms.Button RedoButton;
+        private System.Windows.Forms.Button EraserButton;
+        private System.Windows.Forms.Button BrushButton;
+        private System.Windows.Forms.Button PencilButton;
+        private System.Windows.Forms.Button LineButton;
     }
 }
 

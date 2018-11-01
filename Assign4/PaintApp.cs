@@ -12,18 +12,19 @@ using System.Windows.Forms;
 namespace Assign4
 {
 
-    public partial class Form1 : Form
+    public partial class PaintApp : Form
     {
         public Stack leftStack = new Stack();
         public Stack rightStack = new Stack();
-        public Graphics g; 
+        public Graphics g;
         public Point point1;
         public Point point2;
-        public Color selectedColor = Color.Black; 
+        public Color selectedColor = Color.Black;
 
-        public Form1()
+        public PaintApp()
         {
             InitializeComponent();
+            CenterToScreen();
         }
 
         private void Box_Click(object sender, EventArgs e)
@@ -35,17 +36,17 @@ namespace Assign4
 
         }
 
-        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        private void PaintCanvas_MouseDown(object sender, MouseEventArgs e)
         {
             point1 = e.Location; 
         }
 
-        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        private void PaintCanvas_MouseMove(object sender, MouseEventArgs e)
         {
     //        if (movingMouse)
 
         }
-        private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
+        private void PaintCanvas_MouseUp(object sender, MouseEventArgs e)
         {
 
             point2 = e.Location;
@@ -56,7 +57,7 @@ namespace Assign4
 
         }
 
-        private void pictureBox1_Paint(object sender, PaintEventArgs e)
+        private void PaintCanvas_Paint(object sender, PaintEventArgs e)
         {
 
         }
