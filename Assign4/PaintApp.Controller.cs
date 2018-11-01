@@ -32,12 +32,18 @@ namespace Assign4
         {
 
         }
+
         private void PaintCanvas_MouseUp(object sender, MouseEventArgs e)
         {
             if (!point1.IsEmpty && !point2.IsEmpty)
             {
+                points.Add(point1);
+                points.Add(point2);
                 PaintCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.PaintCanvas_Paint);
                 PaintCanvas.Refresh();
+
+                point1 = Point.Empty;
+                point2 = Point.Empty;
             }
         }
 
@@ -52,10 +58,7 @@ namespace Assign4
                 int x2 = point2.X;
                 int y2 = point2.Y;
 
-                e.Graphics.DrawLine(linePen, x1, y1, x2, y2);
-
-                point1 = Point.Empty;
-                point2 = Point.Empty;
+                e.Graphics.DrawLines(linePen, points.ToArray());
             }
         }
     }
