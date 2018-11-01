@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,10 +14,11 @@ namespace Assign4
 
     public partial class Form1 : Form
     {
-
+        public Stack leftStack = new Stack();
+        public Stack rightStack = new Stack();
         public Graphics g; 
-        private Point point1;
-        private Point point2;
+        public Point point1;
+        public Point point2;
         public Color selectedColor = Color.Black; 
 
         public Form1()
@@ -38,13 +40,25 @@ namespace Assign4
             point1 = e.Location; 
         }
 
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+    //        if (movingMouse)
+
+        }
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
-            Pen linePen = new Pen(selectedColor); 
+
             point2 = e.Location;
-            g = this.CreateGraphics(); 
-            g.DrawLine(linePen, point1, point2); 
-            
+            Pen linePen = new Pen(selectedColor);
+            g = this.CreateGraphics();
+            //    e.Graphics.DrawLine
+            g.DrawLine(linePen, point1, point2);
+
+        }
+
+        private void pictureBox1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
