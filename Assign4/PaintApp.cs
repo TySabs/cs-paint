@@ -12,16 +12,16 @@ using System.Windows.Forms;
 namespace Assign4
 {
 
-    public partial class Form1 : Form
+    public partial class PaintApp : Form
     {
         public Stack leftStack = new Stack();
         public Stack rightStack = new Stack();
-        public Graphics g; 
+        public Graphics g;
         public Point point1;
         public Point point2;
-        public Color selectedColor = Color.Black; 
+        public Color selectedColor = Color.Black;
 
-        public Form1()
+        public PaintApp()
         {
             InitializeComponent();
         }
