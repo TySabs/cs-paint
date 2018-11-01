@@ -66,6 +66,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="PaintApp.Controller.cs">
+      <DependentUpon>PaintApp.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaintApp.Model.cs">
+      <DependentUpon>PaintApp.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
