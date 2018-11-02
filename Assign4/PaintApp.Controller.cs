@@ -57,7 +57,7 @@ namespace Assign4
 
         private void PaintCanvas_MouseMove(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left && (isPencilSelected || isEraserSelected))
+            if (e.Button == MouseButtons.Left && (isPencilSelected || isEraserSelected || isPaintSelected))
 
             {
                 brushStroke.Item2.Add(e.Location);
