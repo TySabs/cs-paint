@@ -28,7 +28,5 @@ namespace Assign4
             int w = Screen.PrimaryScreen.WorkingArea.Width - 300;
             Size = new Size(w, h);
         }
-
-
     }
 }
