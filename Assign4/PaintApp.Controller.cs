@@ -108,11 +108,12 @@ namespace Assign4
 
             if (brushStroke.Item2.Count > 0)
             {
-                e.Graphics.DrawLines(brushStroke.Item1, brushStroke.Item2.ToArray());
                 foreach (Tuple<Pen, List<Point>> stroke in strokes)
                 {
                     e.Graphics.DrawLines(stroke.Item1, stroke.Item2.ToArray());
                 }
+
+                e.Graphics.DrawLines(brushStroke.Item1, brushStroke.Item2.ToArray());
             }
         } 
 
