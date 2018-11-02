@@ -19,6 +19,8 @@ namespace Assign4
         private Color selectedColor = Color.Black;
 
         public List<Tuple<Pen, Point, Point>> lines = new List<Tuple<Pen, Point, Point>>();
+        public List<Point> points = new List<Point>();
+
         private bool isLineSelected = false;
         private bool isPencilSelected = false;
         private bool isPaintSelected = false;

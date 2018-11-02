@@ -451,6 +451,7 @@
             this.PaintCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.PaintCanvas_Paint);
             this.PaintCanvas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PaintCanvas_MouseDown);
             this.PaintCanvas.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PaintCanvas_MouseUp);
+            this.PaintCanvas.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PaintCanvas_MouseMove);
             // 
             // UndoButton
             // 
