@@ -91,25 +91,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Resources\pencil.png" />
+    <Resource Include="Properties\Resources\pencil.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Resources\line.png" />
+    <Resource Include="Properties\Resources\line.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Resources\brush.png" />
+    <Resource Include="Properties\Resources\brush.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Resources\eraser.png" />
+    <Resource Include="Properties\Resources\eraser.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Resources\small.png" />
+    <Resource Include="Properties\Resources\small.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Resources\medium.png" />
+    <Resource Include="Properties\Resources\medium.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Resources\large.png" />
+    <Resource Include="Properties\Resources\large.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
