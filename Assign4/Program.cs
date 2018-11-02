@@ -18,5 +18,6 @@ namespace Assign4
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new PaintApp());
         }
+
     }
 }
