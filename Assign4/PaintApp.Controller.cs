@@ -14,6 +14,7 @@ namespace Assign4
         {
             TextBox temp = sender as TextBox;
             selectedColor = temp.BackColor;
+            infoCanvas.BackColor = temp.BackColor; 
         }
 
         private void PaintCanvas_MouseDown(object sender, MouseEventArgs e)
@@ -77,6 +78,8 @@ namespace Assign4
             isEraserSelected = false;
 
             isLineSelected = true;
+
+            textBox1.Text = "Draw Line";
         }
 
         private void PencilButton_Click(object sender, EventArgs e)
@@ -86,6 +89,7 @@ namespace Assign4
             isEraserSelected = false;
 
             isPencilSelected = true;
+            textBox1.Text = "Pencil"; 
         }
 
         private void BrushButton_Click(object sender, EventArgs e)
@@ -95,6 +99,8 @@ namespace Assign4
             isEraserSelected = false;
 
             isPaintSelected = true;
+
+            textBox1.Text = "Brush";
         }
 
         private void EraserButton_Click(object sender, EventArgs e)
@@ -104,6 +110,18 @@ namespace Assign4
             isPaintSelected = false;
 
             isEraserSelected = true;
+
+            textBox1.Text = "Eraser";
+        }
+
+        private void UndoButton_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "Undo";
+        }
+
+        private void RedoButton_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "Redo";
         }
     }
 }
