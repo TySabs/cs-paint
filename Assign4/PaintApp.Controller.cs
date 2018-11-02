@@ -53,11 +53,19 @@ namespace Assign4
                 brushStroke = new Tuple<Pen, List<Point>>(eraserPen, new List<Point>());
                 brushStroke.Item2.Add(e.Location);
             }
+
+            if (isCustom)
+            {
+                Pen eraserPen = new Pen(selectedColor, (float)upDown.Value);
+                brushStroke = new Tuple<Pen, List<Point>>(eraserPen, new List<Point>());
+                brushStroke.Item2.Add(e.Location);
+
+            }
         }
 
         private void PaintCanvas_MouseMove(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left && (isPencilSelected || isEraserSelected || isPaintSelected))
+            if (e.Button == MouseButtons.Left && (isPencilSelected || isEraserSelected || isPaintSelected || isCustom))
 
             {
                 brushStroke.Item2.Add(e.Location);
@@ -82,7 +90,7 @@ namespace Assign4
                 point2 = Point.Empty;
             }
 
-            if (isPencilSelected || isEraserSelected || isPaintSelected)
+            if (isPencilSelected || isEraserSelected || isPaintSelected || isCustom)
             {
                 strokes.Add(brushStroke);
 
@@ -121,7 +129,7 @@ namespace Assign4
             isPencilSelected = false;
             isPaintSelected = false;
             isEraserSelected = false;
-
+            isCustom = false; 
             isLineSelected = true;
 
             textBox1.Text = "Draw Line";
@@ -132,7 +140,7 @@ namespace Assign4
             isLineSelected = false;
             isPaintSelected = false;
             isEraserSelected = false;
-
+            isCustom = false;
             isPencilSelected = true;
             textBox1.Text = "Pencil"; 
         }
@@ -142,7 +150,7 @@ namespace Assign4
             isLineSelected = false;
             isPencilSelected = false;
             isEraserSelected = false;
-
+            isCustom = false;
             isPaintSelected = true;
 
             textBox1.Text = "Brush";
@@ -153,7 +161,7 @@ namespace Assign4
             isLineSelected = false;
             isPencilSelected = false;
             isPaintSelected = false;
-
+            isCustom = false;
             isEraserSelected = true;
 
             textBox1.Text = "Eraser";
@@ -169,10 +177,16 @@ namespace Assign4
             textBox1.Text = "Redo";
         }
 
-        private void fillBox()
+        private void SizeButton_Click(object sender, EventArgs e)
         {
-            infoCanvas.BackColor = Color.Black;
-            textBox1.Text = "None Selected";
+          //  Pen eraserPen = new Pen(selectedColor, (float)upDown.Value);
+            textBox1.Text = "Custom";
+            isPencilSelected = false;
+            isPaintSelected = false;
+            isEraserSelected = false;
+            isCustom = true;
+            isLineSelected = false;
         }
+
     }
 }
