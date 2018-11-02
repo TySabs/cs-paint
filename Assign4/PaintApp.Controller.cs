@@ -36,22 +36,22 @@ namespace Assign4
 
             if (isPencilSelected)
             {
-                brushStroke = new Tuple<Pen, List<Point>>(selectedPen, new List<Point>());
-                brushStroke.Item2.Add(e.Location);
+                brushStroke = new Stroke(selectedPen, new List<Point>());
+                brushStroke.Points.Add(e.Location);
             }
 
             if (isEraserSelected)
             {
                 Pen eraserPen = new Pen(PaintCanvas.BackColor, 10);
-                brushStroke = new Tuple<Pen, List<Point>>(eraserPen, new List<Point>());
-                brushStroke.Item2.Add(e.Location);
+                brushStroke = new Stroke(eraserPen, new List<Point>());
+                brushStroke.Points.Add(e.Location);
             }
 
             if (isPaintSelected)
             {
                 Pen eraserPen = new Pen(selectedColor, 10);
-                brushStroke = new Tuple<Pen, List<Point>>(eraserPen, new List<Point>());
-                brushStroke.Item2.Add(e.Location);
+                brushStroke = new Stroke(eraserPen, new List<Point>());
+                brushStroke.Points.Add(e.Location);
             }
         }
 
@@ -60,7 +60,7 @@ namespace Assign4
             if (e.Button == MouseButtons.Left && (isPencilSelected || isEraserSelected || isPaintSelected))
 
             {
-                brushStroke.Item2.Add(e.Location);
+                brushStroke.Points.Add(e.Location);
 
                 PaintCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.PaintCanvas_Paint);
                 PaintCanvas.Refresh();
@@ -106,14 +106,14 @@ namespace Assign4
                 }
             }
 
-            if (brushStroke.Item2.Count > 0)
+            if (brushStroke.Points.Count > 0)
             {
-                foreach (Tuple<Pen, List<Point>> stroke in strokes)
+                foreach (Stroke stroke in strokes)
                 {
-                    e.Graphics.DrawLines(stroke.Item1, stroke.Item2.ToArray());
+                    e.Graphics.DrawLines(stroke.StrokePen, stroke.Points.ToArray());
                 }
 
-                e.Graphics.DrawLines(brushStroke.Item1, brushStroke.Item2.ToArray());
+                e.Graphics.DrawLines(brushStroke.StrokePen, brushStroke.Points.ToArray());
             }
         } 
 

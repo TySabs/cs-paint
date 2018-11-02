@@ -20,8 +20,8 @@ namespace Assign4
         private static Pen selectedPen = new Pen(Color.Black);
 
         public List<Line> lines = new List<Line>();
-        public List<Tuple<Pen, List<Point>>> strokes = new List<Tuple<Pen, List<Point>>>();
-        public Tuple<Pen, List<Point>> brushStroke = new Tuple<Pen, List<Point>>(selectedPen, new List<Point>());
+        public List<Stroke> strokes = new List<Stroke>();
+        public Stroke brushStroke = new Stroke(selectedPen, new List<Point>());
 
         private bool isLineSelected = false;
         private bool isPencilSelected = false;
