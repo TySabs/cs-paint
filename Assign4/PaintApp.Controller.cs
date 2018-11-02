@@ -78,7 +78,7 @@ namespace Assign4
 
         private void PaintCanvas_Paint(object sender, PaintEventArgs e)
         {
-            if (isLineSelected && !point1.IsEmpty && !point2.IsEmpty)
+            if (lines.Count > 0)
             {
                 foreach (Tuple<Pen, Point, Point> line in lines)
                 {
@@ -91,16 +91,14 @@ namespace Assign4
                 }
             }
 
-            if (isPencilSelected)
+            if (brushStroke.Item2.Count > 0)
             {
                 e.Graphics.DrawLines(brushStroke.Item1, brushStroke.Item2.ToArray());
                 foreach (Tuple<Pen, List<Point>> stroke in strokes)
                 {
                     e.Graphics.DrawLines(stroke.Item1, stroke.Item2.ToArray());
                 }
-  
             }
-
         } 
 
         private void LineButton_Click(object sender, EventArgs e)

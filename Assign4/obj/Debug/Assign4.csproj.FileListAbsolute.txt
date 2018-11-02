@@ -38,3 +38,13 @@ C:\Users\PC-Desktop\Desktop\Assign4\Assign4\obj\Debug\Assign4.csproj.GenerateRes
 C:\Users\PC-Desktop\Desktop\Assign4\Assign4\obj\Debug\Assign4.csproj.CoreCompileInputs.cache
 C:\Users\PC-Desktop\Desktop\Assign4\Assign4\obj\Debug\Assign4.exe
 C:\Users\PC-Desktop\Desktop\Assign4\Assign4\obj\Debug\Assign4.pdb
+C:\Users\Tyler\Desktop\lab\Assign4\Assign4\obj\Debug\Assign4.csprojAssemblyReference.cache
+C:\Users\Tyler\Desktop\lab\Assign4\Assign4\obj\Debug\Assign4.PaintApp.resources
+C:\Users\Tyler\Desktop\lab\Assign4\Assign4\obj\Debug\Assign4.Properties.Resources.resources
+C:\Users\Tyler\Desktop\lab\Assign4\Assign4\obj\Debug\Assign4.csproj.GenerateResource.cache
+C:\Users\Tyler\Desktop\lab\Assign4\Assign4\obj\Debug\Assign4.csproj.CoreCompileInputs.cache
+C:\Users\Tyler\Desktop\lab\Assign4\Assign4\bin\Debug\Assign4.exe.config
+C:\Users\Tyler\Desktop\lab\Assign4\Assign4\bin\Debug\Assign4.exe
+C:\Users\Tyler\Desktop\lab\Assign4\Assign4\bin\Debug\Assign4.pdb
+C:\Users\Tyler\Desktop\lab\Assign4\Assign4\obj\Debug\Assign4.exe
+C:\Users\Tyler\Desktop\lab\Assign4\Assign4\obj\Debug\Assign4.pdb
