@@ -67,6 +67,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="PaintApp.Controller.cs">
       <DependentUpon>PaintApp.cs</DependentUpon>
@@ -88,6 +89,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\brush.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\eraser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\medium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\large.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

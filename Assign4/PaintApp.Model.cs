@@ -29,6 +29,5 @@ namespace Assign4
         private bool isEraserSelected = false;
         private bool isCustom = false; 
 
-        private bool isMouseDown = false;
     }
 }

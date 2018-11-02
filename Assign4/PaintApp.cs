@@ -25,7 +25,7 @@ namespace Assign4
 
         private void InitFrameSize()
         {
-            int h = Screen.PrimaryScreen.WorkingArea.Height - 200;
+            int h = Screen.PrimaryScreen.WorkingArea.Height - 100;
             int w = Screen.PrimaryScreen.WorkingArea.Width - 300;
             Size = new Size(w, h);
         }

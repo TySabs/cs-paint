@@ -21,7 +21,6 @@ namespace Assign4
 
         private void PaintCanvas_MouseDown(object sender, MouseEventArgs e)
         {
-            isMouseDown = true;
             if (isLineSelected)
             {
                 if (point1.IsEmpty)
@@ -53,13 +52,6 @@ namespace Assign4
                 brushStroke = new Stroke(paintPen, new List<Point>());
                 brushStroke.Points.Add(e.Location);
             }
-
-            if (isCustom)
-            {
-                Pen eraserPen = new Pen(selectedColor, (float)upDown.Value);
-                brushStroke = new Stroke(eraserPen, new List<Point>());
-                brushStroke.Points.Add(e.Location);
-            }
         }
 
         private void PaintCanvas_MouseMove(object sender, MouseEventArgs e)
@@ -76,7 +68,6 @@ namespace Assign4
 
         private void PaintCanvas_MouseUp(object sender, MouseEventArgs e)
         {
-            isMouseDown = false;
             if (isLineSelected && !point1.IsEmpty && !point2.IsEmpty)
             {
                 Line newLine = new Line(selectedPen, point1, point2);
