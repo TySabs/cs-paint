@@ -11,13 +11,17 @@ namespace Assign4
 {
     public partial class PaintApp : Form
     {
-        public Stack leftStack = new Stack();
-        public Stack rightStack = new Stack();
-        public Graphics g;
-        public Point point1;
-        public Point point2;
-        public Color selectedColor = Color.Black;
+        private Stack leftStack = new Stack();
+        private Stack rightStack = new Stack();
+        private Graphics g;
+        private Point point1;
+        private Point point2;
+        private Color selectedColor = Color.Black;
 
         public List<Tuple<Pen, Point, Point>> lines = new List<Tuple<Pen, Point, Point>>();
+        private bool isLineSelected = false;
+        private bool isPencilSelected = false;
+        private bool isPaintSelected = false;
+        private bool isEraserSelected = false;
     }
 }

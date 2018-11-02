@@ -484,6 +484,7 @@
             this.EraserButton.TabIndex = 34;
             this.EraserButton.Text = "Eraser";
             this.EraserButton.UseVisualStyleBackColor = true;
+            this.EraserButton.Click += new System.EventHandler(this.EraserButton_Click);
             // 
             // BrushButton
             // 
@@ -495,6 +496,7 @@
             this.BrushButton.TabIndex = 33;
             this.BrushButton.Text = "Paint Brush";
             this.BrushButton.UseVisualStyleBackColor = true;
+            this.BrushButton.Click += new System.EventHandler(this.BrushButton_Click);
             // 
             // PencilButton
             // 
@@ -506,6 +508,7 @@
             this.PencilButton.TabIndex = 36;
             this.PencilButton.Text = "Pencil";
             this.PencilButton.UseVisualStyleBackColor = true;
+            this.PencilButton.Click += new System.EventHandler(this.PencilButton_Click);
             // 
             // LineButton
             // 
@@ -517,6 +520,7 @@
             this.LineButton.TabIndex = 35;
             this.LineButton.Text = "Draw Line";
             this.LineButton.UseVisualStyleBackColor = true;
+            this.LineButton.Click += new System.EventHandler(this.LineButton_Click);
             // 
             // PaintApp
             // 
