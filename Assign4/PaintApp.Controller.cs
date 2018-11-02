@@ -30,11 +30,22 @@ namespace Assign4
                     point2 = e.Location;
                 }
             }
+
+            if (isPencilSelected)
+            {
+                points.Add(e.Location);
+            }
         }
 
         private void PaintCanvas_MouseMove(object sender, MouseEventArgs e)
         {
-            
+            if (isPencilSelected && e.Button == MouseButtons.Left)
+            {
+                points.Add(e.Location);
+
+                PaintCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.PaintCanvas_Paint);
+                PaintCanvas.Refresh();
+            }
         }
 
         private void PaintCanvas_MouseUp(object sender, MouseEventArgs e)
@@ -52,7 +63,6 @@ namespace Assign4
                 point1 = Point.Empty;
                 point2 = Point.Empty;
             }
-
         }
 
         private void PaintCanvas_Paint(object sender, PaintEventArgs e)
@@ -69,6 +79,15 @@ namespace Assign4
                     e.Graphics.DrawLine(line.Item1, x1, y1, x2, y2);
                 }
             }
+
+            if (isPencilSelected)
+            {
+
+                Pen linePen = new Pen(selectedColor);
+
+                e.Graphics.DrawLines(linePen, points.ToArray());
+            }
+
         } 
 
         private void LineButton_Click(object sender, EventArgs e)
