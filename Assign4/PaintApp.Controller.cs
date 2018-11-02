@@ -49,17 +49,16 @@ namespace Assign4
 
             if (isPaintSelected)
             {
-                Pen eraserPen = new Pen(selectedColor, 10);
-                brushStroke = new Stroke(eraserPen, new List<Point>());
+                Pen paintPen = new Pen(selectedColor, 10);
+                brushStroke = new Stroke(paintPen, new List<Point>());
                 brushStroke.Points.Add(e.Location);
             }
 
             if (isCustom)
             {
                 Pen eraserPen = new Pen(selectedColor, (float)upDown.Value);
-                brushStroke = new Tuple<Pen, List<Point>>(eraserPen, new List<Point>());
-                brushStroke.Item2.Add(e.Location);
-
+                brushStroke = new Stroke(eraserPen, new List<Point>());
+                brushStroke.Points.Add(e.Location);
             }
         }
 
