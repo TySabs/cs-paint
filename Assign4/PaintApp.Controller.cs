@@ -21,6 +21,7 @@ namespace Assign4
 
         private void PaintCanvas_MouseDown(object sender, MouseEventArgs e)
         {
+            isMouseDown = true;
             if (isLineSelected)
             {
                 if (point1.IsEmpty)
@@ -53,11 +54,10 @@ namespace Assign4
 
         private void PaintCanvas_MouseUp(object sender, MouseEventArgs e)
         {
+            isMouseDown = false;
             if (isLineSelected && !point1.IsEmpty && !point2.IsEmpty)
             {
-                Pen linePen = new Pen(selectedColor);
-
-                Tuple<Pen, Point, Point> newLine = new Tuple<Pen, Point, Point>(linePen, point1, point2);
+                Tuple<Pen, Point, Point> newLine = new Tuple<Pen, Point, Point>(selectedPen, point1, point2);
                 lines.Add(newLine);
 
                 PaintCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.PaintCanvas_Paint);
@@ -65,6 +65,14 @@ namespace Assign4
 
                 point1 = Point.Empty;
                 point2 = Point.Empty;
+            }
+
+            if (isPencilSelected)
+            {
+                strokes.Add(brushStroke);
+
+                PaintCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.PaintCanvas_Paint);
+                PaintCanvas.Refresh();
             }
         }
 
@@ -86,6 +94,11 @@ namespace Assign4
             if (isPencilSelected)
             {
                 e.Graphics.DrawLines(brushStroke.Item1, brushStroke.Item2.ToArray());
+                foreach (Tuple<Pen, List<Point>> stroke in strokes)
+                {
+                    e.Graphics.DrawLines(stroke.Item1, stroke.Item2.ToArray());
+                }
+  
             }
 
         } 

@@ -27,5 +27,7 @@ namespace Assign4
         private bool isPencilSelected = false;
         private bool isPaintSelected = false;
         private bool isEraserSelected = false;
+
+        private bool isMouseDown = false;
     }
 }
