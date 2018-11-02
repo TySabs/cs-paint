@@ -19,7 +19,7 @@ namespace Assign4
         private Color selectedColor = Color.Black;
         private static Pen selectedPen = new Pen(Color.Black);
 
-        public List<Tuple<Pen, Point, Point>> lines = new List<Tuple<Pen, Point, Point>>();
+        public List<Line> lines = new List<Line>();
         public List<Tuple<Pen, List<Point>>> strokes = new List<Tuple<Pen, List<Point>>>();
         public Tuple<Pen, List<Point>> brushStroke = new Tuple<Pen, List<Point>>(selectedPen, new List<Point>());
 

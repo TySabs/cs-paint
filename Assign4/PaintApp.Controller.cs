@@ -57,7 +57,8 @@ namespace Assign4
 
         private void PaintCanvas_MouseMove(object sender, MouseEventArgs e)
         {
-            if ((isPencilSelected || isEraserSelected || isPaintSelected) && e.Button == MouseButtons.Left)
+            if (e.Button == MouseButtons.Left && (isPencilSelected || isEraserSelected))
+
             {
                 brushStroke.Item2.Add(e.Location);
 
@@ -71,7 +72,7 @@ namespace Assign4
             isMouseDown = false;
             if (isLineSelected && !point1.IsEmpty && !point2.IsEmpty)
             {
-                Tuple<Pen, Point, Point> newLine = new Tuple<Pen, Point, Point>(selectedPen, point1, point2);
+                Line newLine = new Line(selectedPen, point1, point2);
                 lines.Add(newLine);
 
                 PaintCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.PaintCanvas_Paint);
@@ -94,14 +95,14 @@ namespace Assign4
         {
             if (lines.Count > 0)
             {
-                foreach (Tuple<Pen, Point, Point> line in lines)
+                foreach (Line line in lines)
                 {
-                    int x1 = line.Item2.X;
-                    int y1 = line.Item2.Y;
-                    int x2 = line.Item3.X;
-                    int y2 = line.Item3.Y;
+                    int x1 = line.StartPoint.X;
+                    int y1 = line.StartPoint.Y;
+                    int x2 = line.EndPoint.X;
+                    int y2 = line.EndPoint.Y;
 
-                    e.Graphics.DrawLine(line.Item1, x1, y1, x2, y2);
+                    e.Graphics.DrawLine(line.LinePen, x1, y1, x2, y2);
                 }
             }
 
