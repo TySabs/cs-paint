@@ -14,7 +14,9 @@ namespace Assign4
         {
             TextBox temp = sender as TextBox;
             selectedColor = temp.BackColor;
-            infoCanvas.BackColor = temp.BackColor; 
+            infoCanvas.BackColor = temp.BackColor;
+
+            selectedPen = new Pen(selectedColor);
         }
 
         private void PaintCanvas_MouseDown(object sender, MouseEventArgs e)
@@ -33,7 +35,8 @@ namespace Assign4
 
             if (isPencilSelected)
             {
-                points.Add(e.Location);
+                brushStroke = new Tuple<Pen, List<Point>>(selectedPen, new List<Point>());
+                brushStroke.Item2.Add(e.Location);
             }
         }
 
@@ -41,7 +44,7 @@ namespace Assign4
         {
             if (isPencilSelected && e.Button == MouseButtons.Left)
             {
-                points.Add(e.Location);
+                brushStroke.Item2.Add(e.Location);
 
                 PaintCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.PaintCanvas_Paint);
                 PaintCanvas.Refresh();
@@ -82,10 +85,7 @@ namespace Assign4
 
             if (isPencilSelected)
             {
-
-                Pen linePen = new Pen(selectedColor);
-
-                e.Graphics.DrawLines(linePen, points.ToArray());
+                e.Graphics.DrawLines(brushStroke.Item1, brushStroke.Item2.ToArray());
             }
 
         } 
