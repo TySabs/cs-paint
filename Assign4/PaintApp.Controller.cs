@@ -46,11 +46,19 @@ namespace Assign4
                 brushStroke = new Tuple<Pen, List<Point>>(eraserPen, new List<Point>());
                 brushStroke.Item2.Add(e.Location);
             }
+
+            if (isPaintSelected)
+            {
+                Pen eraserPen = new Pen(selectedColor, 10);
+                brushStroke = new Tuple<Pen, List<Point>>(eraserPen, new List<Point>());
+                brushStroke.Item2.Add(e.Location);
+            }
         }
 
         private void PaintCanvas_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left && (isPencilSelected || isEraserSelected))
+
             {
                 brushStroke.Item2.Add(e.Location);
 
@@ -74,7 +82,7 @@ namespace Assign4
                 point2 = Point.Empty;
             }
 
-            if (isPencilSelected || isEraserSelected)
+            if (isPencilSelected || isEraserSelected || isPaintSelected)
             {
                 strokes.Add(brushStroke);
 
@@ -159,6 +167,12 @@ namespace Assign4
         private void RedoButton_Click(object sender, EventArgs e)
         {
             textBox1.Text = "Redo";
+        }
+
+        private void fillBox()
+        {
+            infoCanvas.BackColor = Color.Black;
+            textBox1.Text = "None Selected";
         }
     }
 }
