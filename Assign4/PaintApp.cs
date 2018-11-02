@@ -20,6 +20,7 @@ namespace Assign4
             InitializeComponent();
             InitFrameSize();
             CenterToScreen();
+            fillBox(); 
         }
 
         private void InitFrameSize()
@@ -27,6 +28,12 @@ namespace Assign4
             int h = Screen.PrimaryScreen.WorkingArea.Height - 200;
             int w = Screen.PrimaryScreen.WorkingArea.Width - 300;
             Size = new Size(w, h);
+        }
+
+        private void fillBox()
+        {
+            infoCanvas.BackColor = Color.Black;
+            textBox1.Text = "None Selected";
         }
     }
 }
