@@ -37,7 +37,9 @@ namespace Assign4
         {
             if (!point1.IsEmpty && !point2.IsEmpty)
             {
-                Tuple<Point, Point> newLine = new Tuple<Point, Point>(point1, point2);
+                Pen linePen = new Pen(selectedColor);
+
+                Tuple<Pen, Point, Point> newLine = new Tuple<Pen, Point, Point>(linePen, point1, point2);
                 lines.Add(newLine);
                 PaintCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.PaintCanvas_Paint);
                 PaintCanvas.Refresh();
@@ -51,18 +53,15 @@ namespace Assign4
         {
             if (!point1.IsEmpty && !point2.IsEmpty)
             {
-                Pen linePen = new Pen(selectedColor);
-
-                foreach (Tuple<Point, Point> line in lines)
+                foreach (Tuple<Pen, Point, Point> line in lines)
                 {
-                    int x1 = line.Item1.X;
-                    int y1 = line.Item1.Y;
-                    int x2 = line.Item2.X;
-                    int y2 = line.Item2.Y;
+                    int x1 = line.Item2.X;
+                    int y1 = line.Item2.Y;
+                    int x2 = line.Item3.X;
+                    int y2 = line.Item3.Y;
 
-                    e.Graphics.DrawLine(linePen, x1, y1, x2, y2);
+                    e.Graphics.DrawLine(line.Item1, x1, y1, x2, y2);
                 }
-
             }
         }
     }

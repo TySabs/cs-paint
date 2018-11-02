@@ -18,6 +18,6 @@ namespace Assign4
         public Point point2;
         public Color selectedColor = Color.Black;
 
-        public List<Tuple<Point, Point>> lines = new List<Tuple<Point, Point>>();
+        public List<Tuple<Pen, Point, Point>> lines = new List<Tuple<Pen, Point, Point>>();
     }
 }
