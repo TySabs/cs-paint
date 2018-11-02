@@ -194,7 +194,16 @@ namespace Assign4
         //When user hits Open
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Displays an OpenFileDialog so the user can select a Cursor.  
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "Portable Network Graphics|*.png";
+            openFileDialog1.Title = "Select a Cursor File";
 
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                PaintCanvas.Image = new Bitmap(openFileDialog1.FileName); 
+            }
+            openFileDialog1.Dispose(); 
         }
 
         //When user hits save
