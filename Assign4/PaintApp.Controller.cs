@@ -55,7 +55,6 @@ namespace Assign4
 
                 foreach (Tuple<Point, Point> line in lines)
                 {
-
                     int x1 = line.Item1.X;
                     int y1 = line.Item1.Y;
                     int x2 = line.Item2.X;
