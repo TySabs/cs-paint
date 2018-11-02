@@ -179,5 +179,40 @@ namespace Assign4
             isLineSelected = false;
         }
 
+        //When user hits About the Developers 
+        private void aboutTheDevelopersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("About the Developers: \nJosh Ruge Tyler Saballus\nTheme Song: \nhttps://www.youtube.com/watch?v=9jK-NcRmVcw"); 
+        }
+
+        //When User hits New in file system 
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //When user hits Open
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //When user hits save
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Users hits save as
+        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //User hits Recently Opened 
+        private void recentlyOpenedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

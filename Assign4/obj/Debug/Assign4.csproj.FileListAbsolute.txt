@@ -49,3 +49,4 @@ C:\Users\Tyler\Desktop\lab\Assign4\Assign4\bin\Debug\Assign4.pdb
 C:\Users\Tyler\Desktop\lab\Assign4\Assign4\obj\Debug\Assign4.exe
 C:\Users\Tyler\Desktop\lab\Assign4\Assign4\obj\Debug\Assign4.pdb
 C:\Users\Tyler\Desktop\Assign4\Assign4\obj\Debug\Assign4.g.resources
+C:\Users\PC-Desktop\Desktop\Assign4\Assign4\obj\Debug\Assign4.g.resources
