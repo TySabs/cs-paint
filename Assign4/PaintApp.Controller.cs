@@ -39,11 +39,18 @@ namespace Assign4
                 brushStroke = new Tuple<Pen, List<Point>>(selectedPen, new List<Point>());
                 brushStroke.Item2.Add(e.Location);
             }
+
+            if (isEraserSelected)
+            {
+                Pen eraserPen = new Pen(PaintCanvas.BackColor, 10);
+                brushStroke = new Tuple<Pen, List<Point>>(eraserPen, new List<Point>());
+                brushStroke.Item2.Add(e.Location);
+            }
         }
 
         private void PaintCanvas_MouseMove(object sender, MouseEventArgs e)
         {
-            if (isPencilSelected && e.Button == MouseButtons.Left)
+            if ((isPencilSelected || isEraserSelected) && e.Button == MouseButtons.Left)
             {
                 brushStroke.Item2.Add(e.Location);
 
@@ -67,7 +74,7 @@ namespace Assign4
                 point2 = Point.Empty;
             }
 
-            if (isPencilSelected)
+            if (isPencilSelected || isEraserSelected)
             {
                 strokes.Add(brushStroke);
 
