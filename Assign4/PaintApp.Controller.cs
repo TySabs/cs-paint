@@ -376,6 +376,7 @@ namespace Assign4
         {
             lines.Clear();
             strokes.Clear();
+            PaintCanvas.Image = null;
             PaintCanvas.Refresh();
         }
 
@@ -414,7 +415,14 @@ namespace Assign4
         {
             if (savePath != null)
             {
-                PaintCanvas.Image.Save(savePath, ImageFormat.Png);
+                Bitmap imageMap = new Bitmap(PaintCanvas.Width, PaintCanvas.Height);
+                PaintCanvas.DrawToBitmap(imageMap, PaintCanvas.Bounds);
+
+                PictureBox saveBox = new PictureBox();
+                saveBox.Image = imageMap;
+
+                //code to save the file;
+                saveBox.Image.Save(savePath, ImageFormat.Png);
             } else
             {
                 SaveFileDialog saveDialog1 = new SaveFileDialog();
@@ -425,8 +433,15 @@ namespace Assign4
                 {
                     string fileName = saveDialog1.FileName;
                     savePath = fileName;
+
+                    Bitmap imageMap = new Bitmap(PaintCanvas.Width, PaintCanvas.Height);
+                    PaintCanvas.DrawToBitmap(imageMap, PaintCanvas.Bounds);
+
+                    PictureBox saveBox = new PictureBox();
+                    saveBox.Image = imageMap;
+
                     //code to save the file;
-                    PaintCanvas.Image.Save(fileName, ImageFormat.Png);
+                    saveBox.Image.Save(fileName, ImageFormat.Png);
                 }
             }
         }
@@ -447,23 +462,17 @@ namespace Assign4
             {
                 string fileName = saveDialog1.FileName;
                 savePath = fileName;
+
+                Bitmap imageMap = new Bitmap(PaintCanvas.Width, PaintCanvas.Height);
+                PaintCanvas.DrawToBitmap(imageMap, PaintCanvas.Bounds);
+
+                PictureBox saveBox = new PictureBox();
+                saveBox.Image = imageMap;
+
                 //code to save the file;
-                PaintCanvas.Image.Save(fileName, ImageFormat.Png); 
+                saveBox.Image.Save(fileName, ImageFormat.Png); 
             }
         }
-
-        /*******************************************************
-        * Recently Opened File Menu
-        *
-        * Arguments: Object Sender and EventArgs e
-        * Return Type: void
-        * Use Case: 
-        ******************************************************/
-        private void recentlyOpenedToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void SmallButton_Click(object sender, EventArgs e)
         {

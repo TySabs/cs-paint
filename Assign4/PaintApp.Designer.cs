@@ -64,7 +64,6 @@ namespace Assign4
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.recentlyOpenedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutTheDevelopersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
@@ -93,7 +92,7 @@ namespace Assign4
             // 
             this.BlackBox.BackColor = System.Drawing.Color.Black;
             this.BlackBox.Location = new System.Drawing.Point(28, 141);
-            this.BlackBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.BlackBox.Margin = new System.Windows.Forms.Padding(7);
             this.BlackBox.Multiline = true;
             this.BlackBox.Name = "BlackBox";
             this.BlackBox.ReadOnly = true;
@@ -105,7 +104,7 @@ namespace Assign4
             // 
             this.GrayBox.BackColor = System.Drawing.Color.Gray;
             this.GrayBox.Location = new System.Drawing.Point(133, 141);
-            this.GrayBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.GrayBox.Margin = new System.Windows.Forms.Padding(7);
             this.GrayBox.Multiline = true;
             this.GrayBox.Name = "GrayBox";
             this.GrayBox.Size = new System.Drawing.Size(74, 75);
@@ -116,7 +115,7 @@ namespace Assign4
             // 
             this.OliveBox.BackColor = System.Drawing.Color.Olive;
             this.OliveBox.Location = new System.Drawing.Point(338, 141);
-            this.OliveBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.OliveBox.Margin = new System.Windows.Forms.Padding(7);
             this.OliveBox.Multiline = true;
             this.OliveBox.Name = "OliveBox";
             this.OliveBox.Size = new System.Drawing.Size(74, 75);
@@ -127,7 +126,7 @@ namespace Assign4
             // 
             this.MaroonBox.BackColor = System.Drawing.Color.Maroon;
             this.MaroonBox.Location = new System.Drawing.Point(238, 141);
-            this.MaroonBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.MaroonBox.Margin = new System.Windows.Forms.Padding(7);
             this.MaroonBox.Multiline = true;
             this.MaroonBox.Name = "MaroonBox";
             this.MaroonBox.Size = new System.Drawing.Size(74, 75);
@@ -138,7 +137,7 @@ namespace Assign4
             // 
             this.PurpleBox.BackColor = System.Drawing.Color.Purple;
             this.PurpleBox.Location = new System.Drawing.Point(758, 141);
-            this.PurpleBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.PurpleBox.Margin = new System.Windows.Forms.Padding(7);
             this.PurpleBox.Multiline = true;
             this.PurpleBox.Name = "PurpleBox";
             this.PurpleBox.Size = new System.Drawing.Size(74, 75);
@@ -149,7 +148,7 @@ namespace Assign4
             // 
             this.NavyBox.BackColor = System.Drawing.Color.Navy;
             this.NavyBox.Location = new System.Drawing.Point(656, 141);
-            this.NavyBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.NavyBox.Margin = new System.Windows.Forms.Padding(7);
             this.NavyBox.Multiline = true;
             this.NavyBox.Name = "NavyBox";
             this.NavyBox.Size = new System.Drawing.Size(74, 75);
@@ -160,7 +159,7 @@ namespace Assign4
             // 
             this.TealBox.BackColor = System.Drawing.Color.Teal;
             this.TealBox.Location = new System.Drawing.Point(553, 141);
-            this.TealBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.TealBox.Margin = new System.Windows.Forms.Padding(7);
             this.TealBox.Multiline = true;
             this.TealBox.Name = "TealBox";
             this.TealBox.Size = new System.Drawing.Size(74, 75);
@@ -171,7 +170,7 @@ namespace Assign4
             // 
             this.GreenBox.BackColor = System.Drawing.Color.Green;
             this.GreenBox.Location = new System.Drawing.Point(443, 141);
-            this.GreenBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.GreenBox.Margin = new System.Windows.Forms.Padding(7);
             this.GreenBox.Multiline = true;
             this.GreenBox.Name = "GreenBox";
             this.GreenBox.Size = new System.Drawing.Size(74, 75);
@@ -182,7 +181,7 @@ namespace Assign4
             // 
             this.SiennaBox.BackColor = System.Drawing.Color.Sienna;
             this.SiennaBox.Location = new System.Drawing.Point(1381, 141);
-            this.SiennaBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.SiennaBox.Margin = new System.Windows.Forms.Padding(7);
             this.SiennaBox.Multiline = true;
             this.SiennaBox.Name = "SiennaBox";
             this.SiennaBox.Size = new System.Drawing.Size(74, 75);
@@ -193,7 +192,7 @@ namespace Assign4
             // 
             this.BlueVioletBox.BackColor = System.Drawing.Color.BlueViolet;
             this.BlueVioletBox.Location = new System.Drawing.Point(1283, 141);
-            this.BlueVioletBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.BlueVioletBox.Margin = new System.Windows.Forms.Padding(7);
             this.BlueVioletBox.Multiline = true;
             this.BlueVioletBox.Name = "BlueVioletBox";
             this.BlueVioletBox.Size = new System.Drawing.Size(74, 75);
@@ -204,7 +203,7 @@ namespace Assign4
             // 
             this.SteelBlueBox.BackColor = System.Drawing.Color.SteelBlue;
             this.SteelBlueBox.Location = new System.Drawing.Point(1183, 141);
-            this.SteelBlueBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.SteelBlueBox.Margin = new System.Windows.Forms.Padding(7);
             this.SteelBlueBox.Multiline = true;
             this.SteelBlueBox.Name = "SteelBlueBox";
             this.SteelBlueBox.Size = new System.Drawing.Size(74, 75);
@@ -215,7 +214,7 @@ namespace Assign4
             // 
             this.DeepSkyBlueBox.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.DeepSkyBlueBox.Location = new System.Drawing.Point(1078, 141);
-            this.DeepSkyBlueBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.DeepSkyBlueBox.Margin = new System.Windows.Forms.Padding(7);
             this.DeepSkyBlueBox.Multiline = true;
             this.DeepSkyBlueBox.Name = "DeepSkyBlueBox";
             this.DeepSkyBlueBox.Size = new System.Drawing.Size(74, 75);
@@ -226,7 +225,7 @@ namespace Assign4
             // 
             this.DarkSlateGrayBox.BackColor = System.Drawing.Color.DarkSlateGray;
             this.DarkSlateGrayBox.Location = new System.Drawing.Point(973, 141);
-            this.DarkSlateGrayBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.DarkSlateGrayBox.Margin = new System.Windows.Forms.Padding(7);
             this.DarkSlateGrayBox.Multiline = true;
             this.DarkSlateGrayBox.Name = "DarkSlateGrayBox";
             this.DarkSlateGrayBox.Size = new System.Drawing.Size(74, 75);
@@ -237,7 +236,7 @@ namespace Assign4
             // 
             this.DarkKhakiBox.BackColor = System.Drawing.Color.DarkKhaki;
             this.DarkKhakiBox.Location = new System.Drawing.Point(863, 141);
-            this.DarkKhakiBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.DarkKhakiBox.Margin = new System.Windows.Forms.Padding(7);
             this.DarkKhakiBox.Multiline = true;
             this.DarkKhakiBox.Name = "DarkKhakiBox";
             this.DarkKhakiBox.Size = new System.Drawing.Size(74, 75);
@@ -248,7 +247,7 @@ namespace Assign4
             // 
             this.SandyBrownBox.BackColor = System.Drawing.Color.SandyBrown;
             this.SandyBrownBox.Location = new System.Drawing.Point(1381, 241);
-            this.SandyBrownBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.SandyBrownBox.Margin = new System.Windows.Forms.Padding(7);
             this.SandyBrownBox.Multiline = true;
             this.SandyBrownBox.Name = "SandyBrownBox";
             this.SandyBrownBox.Size = new System.Drawing.Size(74, 75);
@@ -259,7 +258,7 @@ namespace Assign4
             // 
             this.DeepPinkBox.BackColor = System.Drawing.Color.DeepPink;
             this.DeepPinkBox.Location = new System.Drawing.Point(1283, 241);
-            this.DeepPinkBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.DeepPinkBox.Margin = new System.Windows.Forms.Padding(7);
             this.DeepPinkBox.Multiline = true;
             this.DeepPinkBox.Name = "DeepPinkBox";
             this.DeepPinkBox.Size = new System.Drawing.Size(74, 75);
@@ -270,7 +269,7 @@ namespace Assign4
             // 
             this.MediumSlateBlueBox.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.MediumSlateBlueBox.Location = new System.Drawing.Point(1183, 241);
-            this.MediumSlateBlueBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.MediumSlateBlueBox.Margin = new System.Windows.Forms.Padding(7);
             this.MediumSlateBlueBox.Multiline = true;
             this.MediumSlateBlueBox.Name = "MediumSlateBlueBox";
             this.MediumSlateBlueBox.Size = new System.Drawing.Size(74, 75);
@@ -281,7 +280,7 @@ namespace Assign4
             // 
             this.PowderBlueBox.BackColor = System.Drawing.Color.PowderBlue;
             this.PowderBlueBox.Location = new System.Drawing.Point(1078, 241);
-            this.PowderBlueBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.PowderBlueBox.Margin = new System.Windows.Forms.Padding(7);
             this.PowderBlueBox.Multiline = true;
             this.PowderBlueBox.Name = "PowderBlueBox";
             this.PowderBlueBox.Size = new System.Drawing.Size(74, 75);
@@ -292,7 +291,7 @@ namespace Assign4
             // 
             this.SpringGreenBox.BackColor = System.Drawing.Color.SpringGreen;
             this.SpringGreenBox.Location = new System.Drawing.Point(973, 241);
-            this.SpringGreenBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.SpringGreenBox.Margin = new System.Windows.Forms.Padding(7);
             this.SpringGreenBox.Multiline = true;
             this.SpringGreenBox.Name = "SpringGreenBox";
             this.SpringGreenBox.Size = new System.Drawing.Size(74, 75);
@@ -303,7 +302,7 @@ namespace Assign4
             // 
             this.LemonChiffonBox.BackColor = System.Drawing.Color.LemonChiffon;
             this.LemonChiffonBox.Location = new System.Drawing.Point(863, 241);
-            this.LemonChiffonBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.LemonChiffonBox.Margin = new System.Windows.Forms.Padding(7);
             this.LemonChiffonBox.Multiline = true;
             this.LemonChiffonBox.Name = "LemonChiffonBox";
             this.LemonChiffonBox.Size = new System.Drawing.Size(74, 75);
@@ -314,7 +313,7 @@ namespace Assign4
             // 
             this.FuchsiaBox.BackColor = System.Drawing.Color.Fuchsia;
             this.FuchsiaBox.Location = new System.Drawing.Point(758, 241);
-            this.FuchsiaBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.FuchsiaBox.Margin = new System.Windows.Forms.Padding(7);
             this.FuchsiaBox.Multiline = true;
             this.FuchsiaBox.Name = "FuchsiaBox";
             this.FuchsiaBox.Size = new System.Drawing.Size(74, 75);
@@ -325,7 +324,7 @@ namespace Assign4
             // 
             this.BlueBox.BackColor = System.Drawing.Color.Blue;
             this.BlueBox.Location = new System.Drawing.Point(656, 241);
-            this.BlueBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.BlueBox.Margin = new System.Windows.Forms.Padding(7);
             this.BlueBox.Multiline = true;
             this.BlueBox.Name = "BlueBox";
             this.BlueBox.Size = new System.Drawing.Size(74, 75);
@@ -336,7 +335,7 @@ namespace Assign4
             // 
             this.AquaBox.BackColor = System.Drawing.Color.Aqua;
             this.AquaBox.Location = new System.Drawing.Point(553, 241);
-            this.AquaBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.AquaBox.Margin = new System.Windows.Forms.Padding(7);
             this.AquaBox.Multiline = true;
             this.AquaBox.Name = "AquaBox";
             this.AquaBox.Size = new System.Drawing.Size(74, 75);
@@ -347,7 +346,7 @@ namespace Assign4
             // 
             this.LimeBox.BackColor = System.Drawing.Color.Lime;
             this.LimeBox.Location = new System.Drawing.Point(443, 241);
-            this.LimeBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.LimeBox.Margin = new System.Windows.Forms.Padding(7);
             this.LimeBox.Multiline = true;
             this.LimeBox.Name = "LimeBox";
             this.LimeBox.Size = new System.Drawing.Size(74, 75);
@@ -358,7 +357,7 @@ namespace Assign4
             // 
             this.YellowBox.BackColor = System.Drawing.Color.Yellow;
             this.YellowBox.Location = new System.Drawing.Point(338, 241);
-            this.YellowBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.YellowBox.Margin = new System.Windows.Forms.Padding(7);
             this.YellowBox.Multiline = true;
             this.YellowBox.Name = "YellowBox";
             this.YellowBox.Size = new System.Drawing.Size(74, 75);
@@ -369,7 +368,7 @@ namespace Assign4
             // 
             this.RedBox.BackColor = System.Drawing.Color.Red;
             this.RedBox.Location = new System.Drawing.Point(238, 241);
-            this.RedBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.RedBox.Margin = new System.Windows.Forms.Padding(7);
             this.RedBox.Multiline = true;
             this.RedBox.Name = "RedBox";
             this.RedBox.Size = new System.Drawing.Size(74, 75);
@@ -380,7 +379,7 @@ namespace Assign4
             // 
             this.SilverBox.BackColor = System.Drawing.Color.Silver;
             this.SilverBox.Location = new System.Drawing.Point(133, 241);
-            this.SilverBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.SilverBox.Margin = new System.Windows.Forms.Padding(7);
             this.SilverBox.Multiline = true;
             this.SilverBox.Name = "SilverBox";
             this.SilverBox.Size = new System.Drawing.Size(74, 75);
@@ -391,7 +390,7 @@ namespace Assign4
             // 
             this.WhiteBox.BackColor = System.Drawing.Color.White;
             this.WhiteBox.Location = new System.Drawing.Point(28, 241);
-            this.WhiteBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.WhiteBox.Margin = new System.Windows.Forms.Padding(7);
             this.WhiteBox.Multiline = true;
             this.WhiteBox.Name = "WhiteBox";
             this.WhiteBox.Size = new System.Drawing.Size(74, 75);
@@ -407,7 +406,7 @@ namespace Assign4
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(14, 4, 0, 4);
-            this.menuStrip1.Size = new System.Drawing.Size(2907, 49);
+            this.menuStrip1.Size = new System.Drawing.Size(2907, 51);
             this.menuStrip1.TabIndex = 28;
             this.menuStrip1.Text = "File";
             // 
@@ -417,53 +416,45 @@ namespace Assign4
             this.newToolStripMenuItem,
             this.openToolStripMenuItem,
             this.saveToolStripMenuItem,
-            this.saveAsToolStripMenuItem,
-            this.recentlyOpenedToolStripMenuItem});
+            this.saveAsToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(70, 41);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(70, 43);
             this.toolStripMenuItem1.Text = "File";
             // 
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(325, 42);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(360, 42);
             this.newToolStripMenuItem.Text = "New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(325, 42);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(360, 42);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(325, 42);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(360, 42);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(325, 42);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(360, 42);
             this.saveAsToolStripMenuItem.Text = "Save As";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
-            // 
-            // recentlyOpenedToolStripMenuItem
-            // 
-            this.recentlyOpenedToolStripMenuItem.Name = "recentlyOpenedToolStripMenuItem";
-            this.recentlyOpenedToolStripMenuItem.Size = new System.Drawing.Size(325, 42);
-            this.recentlyOpenedToolStripMenuItem.Text = "Recently Opened";
-            this.recentlyOpenedToolStripMenuItem.Click += new System.EventHandler(this.recentlyOpenedToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutTheDevelopersToolStripMenuItem});
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(102, 41);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(102, 43);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // aboutTheDevelopersToolStripMenuItem
@@ -488,7 +479,7 @@ namespace Assign4
             // 
             this.UndoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UndoButton.Location = new System.Drawing.Point(2100, 120);
-            this.UndoButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.UndoButton.Margin = new System.Windows.Forms.Padding(7);
             this.UndoButton.Name = "UndoButton";
             this.UndoButton.Size = new System.Drawing.Size(222, 51);
             this.UndoButton.TabIndex = 31;
@@ -500,7 +491,7 @@ namespace Assign4
             // 
             this.RedoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RedoButton.Location = new System.Drawing.Point(2100, 190);
-            this.RedoButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.RedoButton.Margin = new System.Windows.Forms.Padding(7);
             this.RedoButton.Name = "RedoButton";
             this.RedoButton.Size = new System.Drawing.Size(222, 51);
             this.RedoButton.TabIndex = 32;
@@ -545,7 +536,7 @@ namespace Assign4
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(2620, 127);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(7);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(228, 38);
             this.textBox1.TabIndex = 42;
@@ -567,7 +558,7 @@ namespace Assign4
             this.LargeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.LargeButton.Cursor = System.Windows.Forms.Cursors.Default;
             this.LargeButton.Location = new System.Drawing.Point(1953, 127);
-            this.LargeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LargeButton.Margin = new System.Windows.Forms.Padding(2);
             this.LargeButton.Name = "LargeButton";
             this.LargeButton.Size = new System.Drawing.Size(72, 71);
             this.LargeButton.TabIndex = 49;
@@ -579,7 +570,7 @@ namespace Assign4
             this.MediumButton.BackgroundImage = global::Assign4.Properties.Resources.medium;
             this.MediumButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.MediumButton.Location = new System.Drawing.Point(1862, 127);
-            this.MediumButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MediumButton.Margin = new System.Windows.Forms.Padding(2);
             this.MediumButton.Name = "MediumButton";
             this.MediumButton.Size = new System.Drawing.Size(72, 71);
             this.MediumButton.TabIndex = 47;
@@ -591,7 +582,7 @@ namespace Assign4
             this.SmallButton.BackgroundImage = global::Assign4.Properties.Resources.small;
             this.SmallButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SmallButton.Location = new System.Drawing.Point(1776, 127);
-            this.SmallButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SmallButton.Margin = new System.Windows.Forms.Padding(2);
             this.SmallButton.Name = "SmallButton";
             this.SmallButton.Size = new System.Drawing.Size(72, 71);
             this.SmallButton.TabIndex = 46;
@@ -602,7 +593,7 @@ namespace Assign4
             // 
             this.infoCanvas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.infoCanvas.Location = new System.Drawing.Point(2336, 127);
-            this.infoCanvas.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.infoCanvas.Margin = new System.Windows.Forms.Padding(7);
             this.infoCanvas.Name = "infoCanvas";
             this.infoCanvas.Size = new System.Drawing.Size(265, 46);
             this.infoCanvas.TabIndex = 39;
@@ -614,7 +605,7 @@ namespace Assign4
             this.PencilButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PencilButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PencilButton.Location = new System.Drawing.Point(1514, 241);
-            this.PencilButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.PencilButton.Margin = new System.Windows.Forms.Padding(7);
             this.PencilButton.Name = "PencilButton";
             this.PencilButton.Size = new System.Drawing.Size(96, 96);
             this.PencilButton.TabIndex = 36;
@@ -627,7 +618,7 @@ namespace Assign4
             this.LineButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.LineButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LineButton.Location = new System.Drawing.Point(1514, 120);
-            this.LineButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.LineButton.Margin = new System.Windows.Forms.Padding(7);
             this.LineButton.Name = "LineButton";
             this.LineButton.Size = new System.Drawing.Size(96, 96);
             this.LineButton.TabIndex = 35;
@@ -640,7 +631,7 @@ namespace Assign4
             this.EraserButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.EraserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EraserButton.Location = new System.Drawing.Point(1638, 241);
-            this.EraserButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.EraserButton.Margin = new System.Windows.Forms.Padding(7);
             this.EraserButton.Name = "EraserButton";
             this.EraserButton.Size = new System.Drawing.Size(96, 96);
             this.EraserButton.TabIndex = 34;
@@ -653,7 +644,7 @@ namespace Assign4
             this.BrushButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BrushButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BrushButton.Location = new System.Drawing.Point(1638, 120);
-            this.BrushButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.BrushButton.Margin = new System.Windows.Forms.Padding(7);
             this.BrushButton.Name = "BrushButton";
             this.BrushButton.Size = new System.Drawing.Size(96, 96);
             this.BrushButton.TabIndex = 33;
@@ -664,7 +655,7 @@ namespace Assign4
             // 
             this.PaintCanvas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PaintCanvas.Location = new System.Drawing.Point(28, 350);
-            this.PaintCanvas.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.PaintCanvas.Margin = new System.Windows.Forms.Padding(7);
             this.PaintCanvas.Name = "PaintCanvas";
             this.PaintCanvas.Size = new System.Drawing.Size(2839, 1139);
             this.PaintCanvas.TabIndex = 30;
@@ -726,7 +717,7 @@ namespace Assign4
             this.Controls.Add(this.BlackBox);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "PaintApp";
             this.Text = "Josh and Tyler\'s Ode to Paint";
             this.menuStrip1.ResumeLayout(false);
@@ -776,7 +767,6 @@ namespace Assign4
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem recentlyOpenedToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutTheDevelopersToolStripMenuItem;
         private System.Windows.Forms.Button UndoButton;
