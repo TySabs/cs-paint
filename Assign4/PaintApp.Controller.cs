@@ -166,8 +166,6 @@ namespace Assign4
         ******************************************************/
         private void PaintCanvas_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.Clear(PaintCanvas.BackColor);
-
             // Draw Lines
             if (lines.Count > 0)
             {
@@ -395,9 +393,12 @@ namespace Assign4
             openFileDialog1.Filter = "Portable Network Graphics|*.png";
             openFileDialog1.Title = "Select a Cursor File";
 
-            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                PaintCanvas.Image = new Bitmap(openFileDialog1.FileName); 
+                lines.Clear();
+                strokes.Clear();
+
+                PaintCanvas.Image = new Bitmap(openFileDialog1.FileName);
             }
             openFileDialog1.Dispose(); 
         }
