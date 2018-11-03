@@ -411,7 +411,23 @@ namespace Assign4
         ******************************************************/
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (savePath != null)
+            {
+                PaintCanvas.Image.Save(savePath, ImageFormat.Png);
+            } else
+            {
+                SaveFileDialog saveDialog1 = new SaveFileDialog();
+                saveDialog1.Filter = "png (*.png)|*.png";
 
+                DialogResult result = saveDialog1.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    string fileName = saveDialog1.FileName;
+                    savePath = fileName;
+                    //code to save the file;
+                    PaintCanvas.Image.Save(fileName, ImageFormat.Png);
+                }
+            }
         }
 
         /*******************************************************
@@ -424,13 +440,14 @@ namespace Assign4
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveDialog1 = new SaveFileDialog();
+            saveDialog1.Filter = "png (*.png)|*.png";
             DialogResult result = saveDialog1.ShowDialog();
             if (result == DialogResult.OK)
             {
-                String fileName = saveDialog1.FileName;
+                string fileName = saveDialog1.FileName;
+                savePath = fileName;
                 //code to save the file;
                 PaintCanvas.Image.Save(fileName, ImageFormat.Png); 
-
             }
         }
 

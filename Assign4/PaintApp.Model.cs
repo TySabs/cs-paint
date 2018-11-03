@@ -43,8 +43,8 @@ namespace Assign4
         private bool isLargeSelected = false;
 
         private bool isCustom = false; 
+        private bool isSaved = false;
 
-
-
+        private string savePath;
     }
 }
