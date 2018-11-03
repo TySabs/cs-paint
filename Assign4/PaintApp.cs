@@ -48,6 +48,5 @@ namespace Assign4
             infoCanvas.BackColor = Color.Black;
             textBox1.Text = "None Selected";
         }
-
     }
 }

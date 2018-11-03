@@ -14,9 +14,6 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Assign4
@@ -69,15 +66,13 @@ namespace Assign4
 
             if (isEraserSelected)
             {
-                Pen eraserPen = new Pen(PaintCanvas.BackColor, 10);
-                currentStroke = new Stroke(eraserPen, new List<Point>());
+                currentStroke = new Stroke(selectedPen, new List<Point>());
                 currentStroke.Points.Add(e.Location);
             }
 
             if (isPaintSelected)
             {
-                Pen paintPen = new Pen(selectedColor, 10);
-                currentStroke = new Stroke(paintPen, new List<Point>());
+                currentStroke = new Stroke(selectedPen, new List<Point>());
                 currentStroke.Points.Add(e.Location);
             }
         }
@@ -191,6 +186,9 @@ namespace Assign4
             isCustom = false; 
             isLineSelected = true;
 
+            selectedPen = new Pen(selectedColor, 1);
+
+
             textBox1.Text = "Draw Line";
         }
 
@@ -208,6 +206,9 @@ namespace Assign4
             isEraserSelected = false;
             isCustom = false;
             isPencilSelected = true;
+
+            selectedPen = new Pen(selectedColor, 1);
+
             textBox1.Text = "Pencil"; 
         }
 
@@ -226,6 +227,8 @@ namespace Assign4
             isCustom = false;
             isPaintSelected = true;
 
+            selectedPen = new Pen(selectedColor, 10);
+
             textBox1.Text = "Brush";
         }
 
@@ -243,6 +246,8 @@ namespace Assign4
             isPaintSelected = false;
             isCustom = false;
             isEraserSelected = true;
+
+            selectedPen = new Pen(PaintCanvas.BackColor, 10);
 
             textBox1.Text = "Eraser";
         }
@@ -297,7 +302,6 @@ namespace Assign4
         private void RedoButton_Click(object sender, EventArgs e)
         {
             textBox1.Text = "Redo";
-           // List<PaintAction> newAction = strokes.Cast<PaintAction>().ToList();
 
             if (RedoStack.Count > 0)
             {
@@ -425,6 +429,79 @@ namespace Assign4
         private void recentlyOpenedToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+        private void SmallButton_Click(object sender, EventArgs e)
+        {
+            isMediumSelected = false;
+            isLargeSelected = false;
+
+            isSmallSelected = true;
+
+            if (isPencilSelected || isLineSelected)
+            {
+                selectedPen = new Pen(selectedColor, 1);
+            }
+
+            if (isPaintSelected)
+            {
+                selectedPen = new Pen(selectedColor, 10);
+            }
+
+            if (isEraserSelected)
+            {
+                selectedPen = new Pen(PaintCanvas.BackColor, 10);
+            }
+        }
+
+        private void MediumButton_Click(object sender, EventArgs e)
+        {
+            isSmallSelected = false;
+            isLargeSelected = false;
+
+            isMediumSelected = true;
+
+
+            if (isPencilSelected || isLineSelected)
+            {
+                selectedPen = new Pen(selectedColor, 2);
+            }
+
+            if (isPaintSelected)
+            {
+                selectedPen = new Pen(selectedColor, 20);
+            }
+
+            if (isEraserSelected)
+            {
+                selectedPen = new Pen(PaintCanvas.BackColor, 20);
+            }
+        }
+
+        private void LargeButton_Click(object sender, EventArgs e)
+        {
+            isSmallSelected = false;
+            isMediumSelected = false;
+
+            isLargeSelected = true;
+
+
+            if (isPencilSelected || isLineSelected)
+            {
+                selectedPen = new Pen(selectedColor, 3);
+            }
+
+            if (isPaintSelected)
+            {
+                selectedPen = new Pen(selectedColor, 30);
+            }
+
+
+            if (isEraserSelected)
+            {
+                selectedPen = new Pen(PaintCanvas.BackColor, 30);
+            }
         }
     }
 }
