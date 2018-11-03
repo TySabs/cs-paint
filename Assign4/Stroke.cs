@@ -7,14 +7,13 @@ using System.Threading.Tasks;
 
 namespace Assign4
 {
-    public class Stroke
+    public class Stroke : PaintAction
     {
-        public Pen StrokePen { get; set; }
         public List<Point> Points = new List<Point>();
 
-        public Stroke(Pen pen, List<Point> points)
+        public Stroke(Pen pen, List<Point> points) : base()
         {
-            StrokePen = pen;
+            PaintPen = pen;
             Points = points;
         }
     }

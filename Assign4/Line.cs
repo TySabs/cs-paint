@@ -7,15 +7,14 @@ using System.Threading.Tasks;
 
 namespace Assign4
 {
-    public class Line
+    public class Line : PaintAction
     {
         public Point StartPoint { get; set; }
         public Point EndPoint { get; set; }
-        public Pen LinePen { get; set; }
 
-        public Line(Pen pen, Point start, Point end)
+        public Line(Pen pen, Point start, Point end) : base()
         {
-            LinePen = pen;
+            PaintPen = pen;
             StartPoint = start;
             EndPoint = end;
         }

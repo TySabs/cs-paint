@@ -35,22 +35,22 @@ namespace Assign4
 
             if (isPencilSelected)
             {
-                brushStroke = new Stroke(selectedPen, new List<Point>());
-                brushStroke.Points.Add(e.Location);
+                currentStroke = new Stroke(selectedPen, new List<Point>());
+                currentStroke.Points.Add(e.Location);
             }
 
             if (isEraserSelected)
             {
                 Pen eraserPen = new Pen(PaintCanvas.BackColor, 10);
-                brushStroke = new Stroke(eraserPen, new List<Point>());
-                brushStroke.Points.Add(e.Location);
+                currentStroke = new Stroke(eraserPen, new List<Point>());
+                currentStroke.Points.Add(e.Location);
             }
 
             if (isPaintSelected)
             {
                 Pen paintPen = new Pen(selectedColor, 10);
-                brushStroke = new Stroke(paintPen, new List<Point>());
-                brushStroke.Points.Add(e.Location);
+                currentStroke = new Stroke(paintPen, new List<Point>());
+                currentStroke.Points.Add(e.Location);
             }
         }
 
@@ -59,9 +59,8 @@ namespace Assign4
             if (e.Button == MouseButtons.Left && (isPencilSelected || isEraserSelected || isPaintSelected || isCustom))
 
             {
-                brushStroke.Points.Add(e.Location);
+                currentStroke.Points.Add(e.Location);
 
-                PaintCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.PaintCanvas_Paint);
                 PaintCanvas.Refresh();
             }
         }
@@ -72,8 +71,8 @@ namespace Assign4
             {
                 Line newLine = new Line(selectedPen, point1, point2);
                 lines.Add(newLine);
+                UndoStack.Push("Line");
 
-                PaintCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.PaintCanvas_Paint);
                 PaintCanvas.Refresh();
 
                 point1 = Point.Empty;
@@ -82,15 +81,20 @@ namespace Assign4
 
             if (isPencilSelected || isEraserSelected || isPaintSelected || isCustom)
             {
-                strokes.Add(brushStroke);
+                strokes.Add(currentStroke);
+                UndoStack.Push("Stroke");
 
-                PaintCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.PaintCanvas_Paint);
                 PaintCanvas.Refresh();
+
+                currentStroke = new Stroke(selectedPen, new List<Point>());
             }
         }
 
         private void PaintCanvas_Paint(object sender, PaintEventArgs e)
         {
+            e.Graphics.Clear(PaintCanvas.BackColor);
+
+            // Draw Lines
             if (lines.Count > 0)
             {
                 foreach (Line line in lines)
@@ -100,18 +104,26 @@ namespace Assign4
                     int x2 = line.EndPoint.X;
                     int y2 = line.EndPoint.Y;
 
-                    e.Graphics.DrawLine(line.LinePen, x1, y1, x2, y2);
+                    e.Graphics.DrawLine(line.PaintPen, x1, y1, x2, y2);
                 }
             }
 
-            if (brushStroke.Points.Count > 0)
+            // Draw Existing Pencil, PaintBrush, and Eraser Strokes
+            if (strokes.Count > 0)
             {
                 foreach (Stroke stroke in strokes)
                 {
-                    e.Graphics.DrawLines(stroke.StrokePen, stroke.Points.ToArray());
+                    if (stroke.Points.Count > 1)
+                    {
+                        e.Graphics.DrawLines(stroke.PaintPen, stroke.Points.ToArray());
+                    }
                 }
+            }
 
-                e.Graphics.DrawLines(brushStroke.StrokePen, brushStroke.Points.ToArray());
+            // Live Painting of Pencil, PaintBrush, or Eraser
+            if (currentStroke.Points.Count > 1)
+            {
+                e.Graphics.DrawLines(currentStroke.PaintPen, currentStroke.Points.ToArray());
             }
         } 
 
@@ -161,11 +173,59 @@ namespace Assign4
         private void UndoButton_Click(object sender, EventArgs e)
         {
             textBox1.Text = "Undo";
+            if (UndoStack.Count > 0)
+            {
+                string action = UndoStack.Pop();
+                PaintAction newAction;
+
+                switch (action)
+                {
+                    case "Line":
+                        newAction = lines[strokes.Count - 1];
+                        RedoStack.Push(newAction);
+
+                        lines.RemoveAt(lines.Count - 1);
+                        lines.TrimExcess();
+                        break;
+                    case "Stroke":
+                        newAction = strokes[strokes.Count - 1];
+                        RedoStack.Push(newAction);
+
+                        strokes.RemoveAt(strokes.Count - 1);
+                        strokes.TrimExcess();
+                        break;
+                    default:
+                        Console.WriteLine("Undo Button Error!");
+                        break;
+                }
+            }
+
+            PaintCanvas.Refresh();
         }
 
         private void RedoButton_Click(object sender, EventArgs e)
         {
             textBox1.Text = "Redo";
+           // List<PaintAction> newAction = strokes.Cast<PaintAction>().ToList();
+
+            if (RedoStack.Count > 0)
+            {
+                var action = RedoStack.Pop();
+
+                if (action is Line)
+                {
+                    lines.Add((Line)action);
+                    UndoStack.Push("Line");
+                    PaintCanvas.Refresh();
+                }
+
+                if (action is Stroke)
+                {
+                    strokes.Add((Stroke)action);
+                    UndoStack.Push("Stroke");
+                    PaintCanvas.Refresh();
+                }
+            }
         }
 
         private void SizeButton_Click(object sender, EventArgs e)
