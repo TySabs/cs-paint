@@ -33,8 +33,26 @@ namespace Assign4
             TextBox temp = sender as TextBox;
             selectedColor = temp.BackColor;
             infoCanvas.BackColor = temp.BackColor;
+            int penSize = 1;
 
-            selectedPen = new Pen(selectedColor);
+
+            if (isLineSelected || isPencilSelected)
+            { 
+                if (isSmallSelected) penSize = 1;
+                if (isMediumSelected) penSize = 2;
+                if (isLargeSelected) penSize = 3;
+
+                selectedPen = new Pen(selectedColor, penSize);
+            }
+
+            if (isPaintSelected)
+            {
+                if (isSmallSelected) penSize = 10;
+                if (isMediumSelected) penSize = 20;
+                if (isLargeSelected) penSize = 30;
+
+                selectedPen = new Pen(selectedColor, penSize);
+            }
         }
 
         /*******************************************************
@@ -48,6 +66,9 @@ namespace Assign4
         {
             if (isLineSelected)
             {
+                Bitmap eraserImage = Properties.Resources.line;
+                Cursor = new Cursor(eraserImage.GetHicon());
+
                 if (point1.IsEmpty)
                 {
                     point1 = e.Location;
@@ -60,18 +81,25 @@ namespace Assign4
 
             if (isPencilSelected)
             {
+                Bitmap pencilImage = Properties.Resources.pencil;
+                Cursor = new Cursor(pencilImage.GetHicon());
+
                 currentStroke = new Stroke(selectedPen, new List<Point>());
-                currentStroke.Points.Add(e.Location);
+                currentStroke.Points.Add(new Point(e.Location.X - 10, e.Location.Y + 10));
             }
 
             if (isEraserSelected)
             {
+                Bitmap eraserImage = Properties.Resources.eraser;
+                Cursor = new Cursor(eraserImage.GetHicon());
                 currentStroke = new Stroke(selectedPen, new List<Point>());
                 currentStroke.Points.Add(e.Location);
             }
 
             if (isPaintSelected)
             {
+                Bitmap paintImage = Properties.Resources.brush;
+                Cursor = new Cursor(paintImage.GetHicon());
                 currentStroke = new Stroke(selectedPen, new List<Point>());
                 currentStroke.Points.Add(e.Location);
             }
@@ -86,10 +114,10 @@ namespace Assign4
         ******************************************************/
         private void PaintCanvas_MouseMove(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left && (isPencilSelected || isEraserSelected || isPaintSelected || isCustom))
+            if (e.Button == MouseButtons.Left && (isPencilSelected || isEraserSelected || isPaintSelected))
 
             {
-                currentStroke.Points.Add(e.Location);
+                currentStroke.Points.Add(new Point(e.Location.X - 10, e.Location.Y + 10));
 
                 PaintCanvas.Refresh();
             }
@@ -125,6 +153,8 @@ namespace Assign4
 
                 currentStroke = new Stroke(selectedPen, new List<Point>());
             }
+
+            Cursor = Cursors.Default;
         }
 
         /*******************************************************
