@@ -228,6 +228,8 @@ namespace Assign4
             isPaintSelected = true;
 
             selectedPen = new Pen(selectedColor, 10);
+            selectedPen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
+            selectedPen.StartCap = System.Drawing.Drawing2D.LineCap.Round;
 
             textBox1.Text = "Brush";
         }
@@ -269,7 +271,7 @@ namespace Assign4
                 switch (action)
                 {
                     case "Line":
-                        newAction = lines[strokes.Count - 1];
+                        newAction = lines[lines.Count - 1];
                         RedoStack.Push(newAction);
 
                         lines.RemoveAt(lines.Count - 1);
@@ -321,23 +323,6 @@ namespace Assign4
                     PaintCanvas.Refresh();
                 }
             }
-        }
-        /*******************************************************
-        * size change button Click
-        *
-        * Arguments: Object Sender and EventArgs e
-        * Return Type: void
-        * Use Case: 
-        ******************************************************/
-        private void SizeButton_Click(object sender, EventArgs e)
-        {
-          //  Pen eraserPen = new Pen(selectedColor, (float)upDown.Value);
-            textBox1.Text = "Custom";
-            isPencilSelected = false;
-            isPaintSelected = false;
-            isEraserSelected = false;
-            isCustom = true;
-            isLineSelected = false;
         }
 
         /*******************************************************
@@ -447,6 +432,8 @@ namespace Assign4
             if (isPaintSelected)
             {
                 selectedPen = new Pen(selectedColor, 10);
+                selectedPen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
+                selectedPen.StartCap = System.Drawing.Drawing2D.LineCap.Round;
             }
 
             if (isEraserSelected)
@@ -471,6 +458,8 @@ namespace Assign4
             if (isPaintSelected)
             {
                 selectedPen = new Pen(selectedColor, 20);
+                selectedPen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
+                selectedPen.StartCap = System.Drawing.Drawing2D.LineCap.Round;
             }
 
             if (isEraserSelected)
@@ -495,6 +484,8 @@ namespace Assign4
             if (isPaintSelected)
             {
                 selectedPen = new Pen(selectedColor, 30);
+                selectedPen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
+                selectedPen.StartCap = System.Drawing.Drawing2D.LineCap.Round;
             }
 
 
