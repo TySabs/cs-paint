@@ -376,9 +376,9 @@ namespace Assign4
         ******************************************************/
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Graphics graphics;
-            graphics = PaintCanvas.CreateGraphics();
-    //        graphics.DrawImage(PaintCanvas.Image, 0, 0);
+            lines.Clear();
+            strokes.Clear();
+            PaintCanvas.Refresh();
         }
 
         /*******************************************************
